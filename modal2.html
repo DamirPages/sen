@@ -9,8 +9,8 @@
 
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-  <script type="module" crossorigin src="./assets/js/index.js"></script>
-  <link rel="stylesheet" href="./assets/css/index.css">
+  <script type="module" crossorigin src="/assets/js/index.js"></script>
+  <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 <body>
 
@@ -18,20 +18,20 @@
 		<header class="header">
 	<div class="wrapper">
 		<div class="menu-button">
-			<img src="./assets/img/menu.svg" alt="">
+			<img src="../assets/assets/img/menu.svg" alt="">
 		</div>
 
 		<a href="/" class="logo">
-			<img src="./assets/img/logo.svg" alt="">
+			<img src="../assets/assets/img/logo.svg" alt="">
 		</a>
 		
 		<nav class="menu">
-			<a href="#" class="menu__link">Правила акции</a>
-			<a href="#" class="menu__link">Вопросы / ответы</a>
+			<a href="#rules-block" class="menu__link">Правила акции</a>
+			<a href="#quest-block" class="menu__link">Вопросы / ответы</a>
 		</nav>
 
 		
-		<button class="button" type="button">
+		<button class="button" type="button" data-modal-open="#modal-login">
 			Войти
 		</button>
 		
@@ -46,23 +46,23 @@
             <span class="banner__title-text">Покупайте Sensodyne в Магнит, выигрывайте призы!</span><br>
             <span>1 ПРОДУКТ в чеке</span>  
             <span>
-                <img src="./assets/img/magnit.svg" alt="">
+                <img src="../assets/assets/img/magnit.svg" alt="">
             </span>                
             <span>= 1 ШАНС</span>
             <div class="banner__title-bg">
-                <img src="./assets/img/blue-bg.svg" alt="">
+                <img src="../assets/assets/img/blue-bg.svg" alt="">
             </div>
         </div>
         <div class="banner__imgs">
-            <img src="./assets/img/yes.png" alt="">
-            <img src="./assets/img/pasta.png" alt="">
+            <img src="../assets/assets/img/yes.png" alt="">
+            <img src="../assets/assets/img/pasta.png" alt="">
         </div>
         <div class="banner__footer">
-            <a href="" class="button">УЧАСТВОВАТЬ</a>
+            <a href="#" class="button" data-modal-open="#modal-login">УЧАСТВОВАТЬ</a>
             <span>Сроки акции с 20.11.24 по 17.12.24</span>
         </div>
         <div class="banner__doctor">
-            <img src="./assets/img/doctor.png" alt="">
+            <img src="../assets/assets/img/doctor.png" alt="">
             <div class="banner__doctor-name">
                 Лобода Е. С.<br>
                 врач-стоматолог, к.м.н.
@@ -70,10 +70,10 @@
         </div>
     </div>
     <div class="banner__bg">
-        <img src="./assets/img/banner-bg.jpg" alt="">
+        <img src="../assets/assets/img/banner-bg.jpg" alt="">
     </div>
 </section>
-	<section class="rules">
+	<section class="rules" id="rules-block">
     <div class="wrapper">
         <div class="rules__container">
             <div class="rules__title">
@@ -277,7 +277,7 @@
         </div>
     </div>
     <div class="rules__bg">
-        <img src="./assets/img/rules-bg.svg" alt="">
+        <img src="../assets/assets/img/rules-bg.svg" alt="">
     </div>
 </section>
 	<div class="gifts">
@@ -288,7 +288,7 @@
         <div class="gifts__container">
             <div class="gifts__block">
                 <div class="gifts__img">
-                    <img src="./assets/img/gift1.png" alt="">
+                    <img src="../assets/assets/img/gift1.png" alt="">
                 </div>
                 <div class="gifts__title">
                     Главные призы
@@ -299,7 +299,7 @@
             </div>
             <div class="gifts__block">
                 <div class="gifts__img">
-                    <img src="./assets/img/gift2.png" alt="">
+                    <img src="../assets/assets/img/gift2.png" alt="">
                 </div>
                 <div class="gifts__title">
                     Специальные призы
@@ -314,10 +314,10 @@
         </div>
     </div>
     <div class="gifts__bg">
-        <img src="./assets/img/gifts-bg.png" alt="">
+        <img src="../assets/assets/img/gifts-bg.png" alt="">
     </div>
 </div>
-	<div class="questions">
+	<div class="questions" id="quest-block">
     <div class="wrapper">
         <div class="questions__title">
             Вопросы / ответы
@@ -390,10 +390,10 @@
         </div>
     </div>
     <div class="questions__bg">
-        <img src="./assets/img/quest-bg.jpg" alt="">
+        <img src="../assets/assets/img/quest-bg.jpg" alt="">
     </div>
 </div>
-	<div class="modal modal-thanks active" id="modal-thanks">
+	<div class="modal modal-code active" id="modal-code">
     <div class="modal__container">
         <div class="modal__title">
             Код отправлен
@@ -401,7 +401,7 @@
         <div class="modal__text">
             Вам необходимо проверить почту указанную при регистрации, а также папку СПАМ!
         </div>
-        <button class="modal__button">
+        <button class="modal__button" data-modal-close>
             Войти
         </button>
     </div>
@@ -437,7 +437,7 @@
             </div>
             <div class="footer__info">
                 <div class="footer__logo">
-                    <img src="./assets/img/logo.svg" alt="">
+                    <img src="../assets/assets/img/logo.svg" alt="">
                 </div>
                 <div class="footer__button">
                     Связаться с нами
@@ -445,8 +445,8 @@
             </div>
         </div>
         <div class="footer__copyright">
-            <a href="">Правила акции</a>
-            <a href="">Вопросы / ответы</a>
+            <a href="#rules-block">Правила акции</a>
+            <a href="#quest-block">Вопросы / ответы</a>
             <a href="">Файлы Cookie</a>
             <a href="">Политика Конфиденциальности</a>
         </div>
