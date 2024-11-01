@@ -1,0 +1,115 @@
+// Базовый файл стилей
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	min-height: 100vh;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+
+	& > * {
+		flex-shrink: 0;
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+* {
+	outline: none !important;
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+}
+
+//Убрать стили айфона у инпутов
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+	// background: transparent;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+//Убирает крестик у инпутов ie
+input::-ms-clear {
+	display: none;
+}
+
+//Убирает глазик на type="password" в ie
+input::-ms-reveal {
+	display: none;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+
+
+
+// Базовый файл стилей
+.wrapper{
+    width: 1140px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 1200px) {
+        width: 900px;
+    }
+
+    @media only screen and (max-width: 991px) {
+        width: 600px;
+    }
+
+    @media only screen and (max-width: 640px) {
+        max-width: calc(100% - 40px);
+        width: 400px;
+    }
+}
+
+body{
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+*{
+    box-sizing: border-box;
+}

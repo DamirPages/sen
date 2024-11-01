@@ -1,0 +1,45 @@
+<header class="header">
+	<div class="wrapper">
+		<div class="menu-button">
+			<img src="./src/assets/img/menu.svg" alt="">
+		</div>
+
+		<a href="/" class="logo">
+			<img src="./src/assets/img/logo.svg" alt="">
+		</a>
+		
+		<nav class="menu">
+			<a href="#" class="menu__link">Правила акции</a>
+			<a href="#" class="menu__link">Вопросы / ответы</a>
+		</nav>
+
+		{% if isAuthorized == false %}
+		<button class="button" type="button">
+			Войти
+		</button>
+		{% else %}
+		<div class="info">
+			<div class="prize">
+				<div class="prize__icon">
+					<img src="./src/assets/img/gift.svg" alt="">
+				</div>
+				<div class="prize__count">3</div>
+				<div class="prize__text">
+					шанса
+				</div>
+			</div>
+			<div class="profile">
+				<div class="profile__img">
+					<img src="./src/assets/img/avatar.png" alt="">
+				</div>
+				<div class="profile__name">
+					Александр
+				</div>
+			</div>
+			<div class="logout">
+				<img src="./src/assets/img/logout.svg" alt="">
+			</div>
+		</div>
+		{% endif %}
+	</div>
+</header>

@@ -1,0 +1,11 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "SENSODYNE" %}
+{% set isAuthorized = false %}
+
+{% block content %}
+	{% include './templates/partials/banner.twig' %}
+	{% include './templates/partials/rules.twig' %}
+	{% include './templates/partials/gifts.twig' %}
+	{% include './templates/partials/questions.twig' %}
+{% endblock %}
