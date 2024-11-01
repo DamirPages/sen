@@ -1,4 +1,4 @@
-<div class="modal modal-check-send active" id="modal-check-send">
+<div class="modal modal-check-send {% if allModalView == true %}active{% endif %}" id="modal-check-send">
     <div class="modal__container">
         <div class="modal__title">
             Ваш чек принят
@@ -6,7 +6,7 @@
         <div class="modal__text">
             На проверку чека нам потребуется не более суток
         </div>
-        <button class="modal__button">
+        <button class="modal__button" data-modal-close>
             OK
         </button>
     </div>

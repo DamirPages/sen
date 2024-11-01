@@ -1,4 +1,4 @@
-<div class="modal modal-login active" id="modal-login">
+<div class="modal modal-login {% if allModalView == true %}active{% endif %}" id="modal-login">
     <div class="modal__container">
         <div class="modal__title">
             Войти
@@ -10,14 +10,14 @@
             <input type="text" class="input" placeholder="Имя">
             <input type="text" class="input" placeholder="E-mail">
             <div class="modal__form-group">
-                <div class="modal__button modal__button-second">
+                <div class="modal__button modal__button-second" data-modal-open="#modal-code">
                     Отправить код
                 </div>
                 <input type="text" class="input" placeholder="1234">
             </div>
-            <button class="modal__button">
+            <a href="./upload.html" class="modal__button">
                 Войти
-            </button>
+            </a>
             <label class="checkbox">
                 <input type="checkbox" class="checkbox__input" checked>
                 <span class="checkbox__icon"></span>

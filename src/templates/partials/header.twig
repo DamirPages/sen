@@ -9,12 +9,12 @@
 		</a>
 		
 		<nav class="menu">
-			<a href="#" class="menu__link">Правила акции</a>
-			<a href="#" class="menu__link">Вопросы / ответы</a>
+			<a href="#rules-block" class="menu__link">Правила акции</a>
+			<a href="#quest-block" class="menu__link">Вопросы / ответы</a>
 		</nav>
 
 		{% if isAuthorized == false %}
-		<button class="button" type="button">
+		<button class="button" type="button" data-modal-open="#modal-login">
 			Войти
 		</button>
 		{% else %}

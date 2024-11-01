@@ -36,6 +36,17 @@
         border-radius: 100px;
         margin-bottom: 17px;
         align-self: baseline;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover{
+            background: #1e429f;
+        }
+
+        &:active{
+            background: #374151;
+        }
+
         svg{
             margin-right: 10px;
         }

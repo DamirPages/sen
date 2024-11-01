@@ -24,6 +24,10 @@
             font-weight: bold;
             text-decoration: none;
             color: #223341;
+
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
     &__button{
@@ -38,6 +42,11 @@
         margin-top: 12px;
         cursor: pointer;
         font-family: "Inter";
+        transition: 0.3s;
+
+        &:hover{
+            background: darken($color: #1e429f, $amount: 5%);
+        }
     }
     &__copyright-text{
         margin-top: 32px;
@@ -54,6 +63,11 @@
             font-size: 16px;
             line-height: 150%;
             text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+            
             @media only screen and (max-width: 991px) {
                 text-align: center;
             }

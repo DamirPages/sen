@@ -2,10 +2,13 @@
 
 {% set title = "SENSODYNE" %}
 {% set isAuthorized = false %}
+{% set allModalView = false %}
 
 {% block content %}
 	{% include './templates/partials/banner.twig' %}
 	{% include './templates/partials/rules.twig' %}
 	{% include './templates/partials/gifts.twig' %}
 	{% include './templates/partials/questions.twig' %}
+	{% include './templates/partials/modal-login.twig' %}
+	{% include './templates/partials/modal-code.twig' %}
 {% endblock %}

@@ -1,8 +1,8 @@
-<div class="modal modal-upload active" id="modal-upload">
+<div class="modal modal-upload {% if allModalView == true %}active{% endif %}" id="modal-upload">
     <div class="modal__container">
         <div class="modal__header">
             Загрузить новый чек
-            <div class="modal__close">
+            <div class="modal__close" data-modal-close>
                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 18.5L18 6.5M6 6.5L18 18.5" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -82,7 +82,7 @@
             </div>
         </div>
         <div class="modal__footer">
-            <div class="modal__button">
+            <div class="modal__button" data-modal-open="#modal-check-send">
                 Отправить чек
             </div>
         </div>

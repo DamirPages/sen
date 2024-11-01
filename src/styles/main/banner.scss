@@ -251,6 +251,11 @@
         font-weight: bold;
         text-decoration: none;
         color: #fff;
+        transition: 0.3s;
+
+        &:hover{
+            background: darken($color: #13BAA6, $amount: 5%);
+        }
 
         @media only screen and (max-width: 1200px) {
             font-size: 22px;

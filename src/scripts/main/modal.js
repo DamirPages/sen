@@ -10,7 +10,15 @@ window.openModal = (modalSelector) => {
 	document.body.style.overflow = 'hidden';
 };
 
-const modalOverlays = document.querySelectorAll('.modal__overlay');
+const modalOverlays = document.querySelectorAll('.modal__overlay, [data-modal-close]');
+const modalOpenSelectors = document.querySelectorAll('[data-modal-open]');
+
+modalOpenSelectors.forEach((modalOpenSelector) => {
+	modalOpenSelector.addEventListener('click', () => {
+		const modalSelector = modalOpenSelector.getAttribute('data-modal-open');
+		window.openModal(modalSelector);
+	});
+});
 
 modalOverlays.forEach((modalOverlay) => {
 	const modalSelector = modalOverlay.closest('.modal').getAttribute('id');
