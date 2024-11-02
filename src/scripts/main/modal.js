@@ -24,3 +24,12 @@ modalOverlays.forEach((modalOverlay) => {
 	const modalSelector = modalOverlay.closest('.modal').getAttribute('id');
 	modalOverlay.addEventListener('click', () => window.closeModal(`#${modalSelector}`));
 });
+
+const links = document.querySelectorAll('a');
+links.forEach((link) => {
+	link.addEventListener('click', (event) => {
+		if (link.getAttribute('href') === '#') {
+			event.preventDefault();
+		}
+	});
+});
