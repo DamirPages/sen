@@ -8,6 +8,14 @@ body {
 html {
 	height: 100%;
     scroll-behavior: smooth;
+	scroll-padding-top: 82px;
+
+	@media only screen and (max-width: 1200px) {
+		scroll-padding-top: 68px;
+	}
+	@media only screen and (max-width: 991px) {
+		scroll-padding-top: 58px;
+	}
 }
 
 body {
@@ -112,4 +120,21 @@ img{
 
 *{
     box-sizing: border-box;
+}
+
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	td, th{
+		border: 1px solid #000;
+	}
+}
+
+.disabled, *:disabled{
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+.hide{
+	display: none;
 }
