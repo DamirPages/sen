@@ -7,7 +7,23 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>SENSODYNE</title>
 
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
   <script type="module" crossorigin src="./assets/js/index.js"></script>
   <link rel="stylesheet" href="./assets/css/index.css">
@@ -407,17 +423,61 @@
             <div class="test">
                 <div class="test__stat">
                     <div class="test__pass">
-                        <span>30%</span>
+                        <span id="progress">0%</span>
                         Пройдено
                     </div>
                     <div class="test__quests">
-                        3 из 10 вопросов
+                        <span id="current-question">*</span>
+                        из 
+                        <span id="total-questions">*</span>
+                        вопросов
                     </div>
                 </div>
                 <div class="test__bar">
-                    <span style="width: 30%"></span>
+                    <span style="width: 0%" id="progress-bar"></span>
                 </div>
-                <div class="test__container">
+                <form class="test__container">
+                    <div class="test__item active">
+                        <div class="test__num">
+                            Вопрос 3
+                        </div>
+                        <div class="test__quest">
+                            Какие основные причины могут привести к повышенной чувствительности зубов?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Преждевременная стираемость эмали
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Агрессивная чистка, которая приводит к истиранию эмали
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Рецессия (опущение) десны
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Все вышеуказанные
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" data-next-question disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
                     <div class="test__item">
                         <div class="test__num">
                             Вопрос 3
@@ -455,13 +515,52 @@
                                 </div>
                             </label>
                         </div>
+                        <button type="button" class="modal__button" data-next-question disabled>
+                            Подтвердить ответ
+                        </button>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal__footer">
-            <div class="modal__button">
-                Подтвердить ответ
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 3
+                        </div>
+                        <div class="test__quest">
+                            Какие основные причины могут привести к повышенной чувствительности зубов?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Преждевременная стираемость эмали
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Агрессивная чистка, которая приводит к истиранию эмали
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Рецессия (опущение) десны
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Все вышеуказанные
+                                </div>
+                            </label>
+                        </div>
+                        <button type="submit" class="modal__button" disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

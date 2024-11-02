@@ -7,7 +7,23 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>SENSODYNE</title>
 
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
   <script type="module" crossorigin src="./assets/js/index.js"></script>
   <link rel="stylesheet" href="./assets/css/index.css">
@@ -405,6 +421,9 @@
         </div>
         <div class="modal__body">
             <div class="upload-file">
+                <!-- Тут будет итоговый файл либо с камеры или тот который прикрепили в формате строки base64 -->
+                <input type="text" id="final-result-file" class="hide">
+                
                 <div class="upload-file__title">
                     Отсканируйте чек
                 </div>
@@ -420,11 +439,23 @@
                             <path d="M80.4688 45.5625H80.5009V45.5947H80.4688V45.5625Z" stroke="#D9D9D9" stroke-width="6.4375" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <div class="upload-file__button">
-                        Открыть камеру
+                    <video id="video" class="upload__video"></video>
+                    <canvas id="canvas" class="upload__canvas"></canvas>
+                    <div class="upload__buttons-container">
+                        <div class="upload-file__button" id="startbutton">
+                            Открыть камеру
+                        </div>
+                        <div class="upload-file__button hide" id="savebutton">
+                            Сделать фото
+                        </div>
+                    </div>
+                    <div class="upload__photo hide" id="imgContainer">
+                        <img src="" alt="" id="photo">
                     </div>
                 </div>
-                <div class="file">
+                <!-- В этом инпуте будет храниться только файл который прикрепляется -->
+                <input type="file" id="check-input" class="hide" accept="image/png, image/gif, image/jpeg">
+                <label for="check-input" class="file">
                     <div class="file__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.1716 7L8.58579 13.5858C7.80474 14.3668 7.80474 15.6332 8.58579 16.4142C9.36684 17.1953 10.6332 17.1953 11.4142 16.4142L17.8284 9.82843C19.3905 8.26633 19.3905 5.73367 17.8284 4.17157C16.2663 2.60948 13.7337 2.60948 12.1716 4.17157L5.75736 10.7574C3.41421 13.1005 3.41421 16.8995 5.75736 19.2426C8.1005 21.5858 11.8995 21.5858 14.2426 19.2426L20.5 13" stroke="#00A1DC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -433,37 +464,20 @@
                     <div class="file__text">
                         Или прикрепите фото чека
                     </div>
-                </div>
-                <div class="result">
+                </label>
+                <div class="result hide" id="result-file-info">
                     <div class="result__title">
                         Загружен файл:
                     </div>
                     <div class="result__file">
-                        <div class="result__file-name">
-                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_30_1302)">
-                                <path d="M5.02393 0.5C4.33643 0.5 3.77393 1.0625 3.77393 1.75V19.25C3.77393 19.9375 4.33643 20.5 5.02393 20.5H17.5239C18.2114 20.5 18.7739 19.9375 18.7739 19.25V5.5L13.7739 0.5H5.02393Z" fill="#E2E5E7"/>
-                                <path d="M15.0239 5.5H18.7739L13.7739 0.5V4.25C13.7739 4.9375 14.3364 5.5 15.0239 5.5Z" fill="#B0B7BD"/>
-                                <path d="M18.7739 9.25L15.0239 5.5H18.7739V9.25Z" fill="#CAD1D8"/>
-                                <path d="M16.2739 16.75C16.2739 17.0938 15.9927 17.375 15.6489 17.375H1.89893C1.55518 17.375 1.27393 17.0938 1.27393 16.75V10.5C1.27393 10.1562 1.55518 9.875 1.89893 9.875H15.6489C15.9927 9.875 16.2739 10.1562 16.2739 10.5V16.75Z" fill="#F15642"/>
-                                <path d="M3.9983 12.3419C3.9983 12.1769 4.1283 11.9969 4.33768 11.9969H5.49205C6.14205 11.9969 6.72705 12.4319 6.72705 13.2656C6.72705 14.0556 6.14205 14.4956 5.49205 14.4956H4.65768V15.1556C4.65768 15.3756 4.51768 15.5 4.33768 15.5C4.17268 15.5 3.9983 15.3756 3.9983 15.1556V12.3419ZM4.65768 12.6262V13.8712H5.49205C5.82705 13.8712 6.09205 13.5756 6.09205 13.2656C6.09205 12.9162 5.82705 12.6262 5.49205 12.6262H4.65768Z" fill="white"/>
-                                <path d="M7.7058 15.5C7.5408 15.5 7.3608 15.41 7.3608 15.1906V12.3519C7.3608 12.1725 7.5408 12.0419 7.7058 12.0419H8.85018C11.1339 12.0419 11.0839 15.5 8.89518 15.5H7.7058ZM8.0208 12.6519V14.8906H8.85018C10.1996 14.8906 10.2596 12.6519 8.85018 12.6519H8.0208Z" fill="white"/>
-                                <path d="M11.8939 13.4862H13.1683C13.3483 13.4862 13.5283 13.6662 13.5283 13.8406C13.5283 14.0056 13.3483 14.1406 13.1683 14.1406H11.8939V15.19C11.8939 15.365 11.7696 15.4994 11.5946 15.4994C11.3746 15.4994 11.2402 15.365 11.2402 15.19V12.3512C11.2402 12.1719 11.3752 12.0412 11.5946 12.0412H13.3489C13.5689 12.0412 13.6989 12.1719 13.6989 12.3512C13.6989 12.5112 13.5689 12.6913 13.3489 12.6913H11.8939V13.4862Z" fill="white"/>
-                                <path d="M15.6489 17.375H3.77393V18H15.6489C15.9927 18 16.2739 17.7188 16.2739 17.375V16.75C16.2739 17.0938 15.9927 17.375 15.6489 17.375Z" fill="#CAD1D8"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_30_1302">
-                                <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
+                        <div class="result__file-name" id="file-name">
                             Photo...4344.jpg
                         </div>
                         <div class="result__file__footer">
-                            <div class="result__file-size">
+                            <div class="result__file-size" id="file-size">
                                 1 MB
                             </div>
-                            <div class="result__file-format">
+                            <div class="result__file-format" id="file-format">
                                 JPG
                             </div>
                         </div>
