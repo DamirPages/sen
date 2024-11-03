@@ -1,0 +1,34 @@
+<div class="modal modal-contact {% if allModalView == true %}active{% endif %}" id="modal-contact">
+    <div class="modal__container">
+        <div class="modal__title">
+            Связаться с нами
+        </div>
+        <div class="modal__text">
+            Необходимо указывать действующий E-mail к которому вы имеете доступ
+        </div>
+        <form class="modal__form">
+            <input type="text" class="input" placeholder="Тема сообщения">
+            <input type="text" class="input" placeholder="E-mail" required>
+            <textarea name="" class="textarea" placeholder="Текст сообщения..." id="" required></textarea>
+            <a href="#" class="modal__button">
+                Отправить
+            </a>
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox__input" checked>
+                <span class="checkbox__icon"></span>
+                <div class="checkbox__text">
+                    Настоящим подтверждаю, что я ознакомлен с <a href="#" data-modal-open="#modal-rules">правилами акции</a>
+                </div>
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox__input" checked>
+                <span class="checkbox__icon"></span>
+                <div class="checkbox__text">
+                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности и согласен на обработку персональных данных
+                    в соответствии с <a href="#" data-modal-open="#modal-politic">указанным здесь текстом</a>
+                </div>
+            </label>
+        </form>
+    </div>
+    <div class="modal__overlay"></div>
+</div>

@@ -33,3 +33,41 @@ links.forEach((link) => {
 		}
 	});
 });
+
+const modalCookie = document.querySelector('.modal-cookie');
+if (modalCookie) {
+	const cookieClose = document.querySelectorAll('[data-cookie-close]');
+	const cookieAccept = document.querySelector('[data-cookie-accept]');
+
+	cookieClose.forEach((close) => {
+		close.addEventListener('click', () => {
+			modalCookie.classList.remove('active');
+		});
+	});
+
+	cookieAccept.addEventListener('click', () => {
+		localStorage.setItem('cookieAcept', '1');
+		modalCookie.classList.remove('active');
+	});
+
+	var cookieAcept = localStorage.getItem('cookieAcept');
+	if (!cookieAcept) {
+		modalCookie.classList.add('active');
+	}
+}
+
+const menuButton = document.querySelector('.menu-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+if(menuButton && mobileMenu) {
+	menuButton.addEventListener('click', () => {
+		mobileMenu.classList.toggle('active');
+	});
+	const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+	mobileMenuLinks.forEach((link) => {
+		link.addEventListener('click', () => {
+			mobileMenu.classList.remove('active');
+		});
+	});
+}

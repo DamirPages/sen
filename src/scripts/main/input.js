@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll('.input');
+const inputs = document.querySelectorAll('.input, .textarea');
 inputs.forEach((input) => {
 	input.addEventListener('input', () => {
 		if (input.value.length > 0) {

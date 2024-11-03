@@ -39,7 +39,7 @@ function startup() {
 	startbutton.addEventListener('click', function (ev) {
 		imgContainer.classList.add('hide');
 		video.classList.remove('hide');
-		navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+		navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false })
 			.then(function (stream) {
 				video.srcObject = stream;
 				video.play();
