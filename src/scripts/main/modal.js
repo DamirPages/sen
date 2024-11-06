@@ -159,3 +159,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		phoneInput.addEventListener('paste', onPhonePaste, false);
 	}
 });
+
+const headerButton = document.querySelector('.scroll-button');
+
+if (headerButton) {
+	document.addEventListener('scroll', () => {
+		if (window.scrollY > window.innerHeight) {
+			headerButton.classList.add('active');
+		} else {
+			headerButton.classList.remove('active');
+		}
+	});
+}
