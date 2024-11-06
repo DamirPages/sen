@@ -604,11 +604,15 @@
 }
 
 .modal-cookie{
+    &.active{
+        pointer-events: none;
+    }
     .modal__container{
         width: calc(100% - 40px);
         max-width: 1140px;
         margin: auto auto 50px auto;
         padding: 20px 43px;
+        pointer-events: all;
 
         @media only screen and (max-width: 470px) {
             padding: 20px;
