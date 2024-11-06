@@ -415,17 +415,46 @@
         <img src="./assets/img/quest-bg.jpg" alt="">
     </div>
 </div>
-	<div class="modal modal-check-send active" id="modal-check-send">
+	<div class="modal modal-auth active" id="modal-auth">
     <div class="modal__container">
         <div class="modal__title">
-            Ваш чек принят
+            Регистрация
         </div>
         <div class="modal__text">
-            На проверку чека нам потребуется не более суток
+            Необходимо указывать действующий E-mail к которому вы имеете доступ
         </div>
-        <button class="modal__button" data-modal-close>
-            OK
-        </button>
+        <form class="modal__form">
+            <input type="text" class="input" placeholder="Имя" required>
+            <input type="text" class="input" placeholder="Тел." required inputmode="numeric" data-tel-input>
+            <input type="text" class="input" placeholder="E-mail" required>
+            <div class="modal__form-group">
+                <div class="modal__button modal__button-second" data-modal-open="#modal-code">
+                    Отправить код
+                </div>
+                <input type="text" class="input" placeholder="1234" required>
+            </div>
+            <a href="./upload.html" class="modal__button">
+                Зарегистрироваться
+            </a>
+            <div class="modal-link-text" data-change-modal="#modal-login">
+              Войти
+            </div>
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox__input" checked>
+                <span class="checkbox__icon"></span>
+                <div class="checkbox__text">
+                    Настоящим подтверждаю, что я ознакомлен с <a href="#" data-modal-open="#modal-rules">правилами акции</a>
+                </div>
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox__input" checked>
+                <span class="checkbox__icon"></span>
+                <div class="checkbox__text">
+                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности и согласен на обработку персональных данных
+                    в соответствии с <a href="#" data-modal-open="#modal-politic">указанным здесь текстом</a>
+                </div>
+            </label>
+        </form>
     </div>
     <div class="modal__overlay"></div>
 </div>
