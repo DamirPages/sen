@@ -5,6 +5,11 @@
     @media only screen and (max-width: 991px) {
         padding: 50px 0;
     }
+
+    @media only screen and (min-width: 1921px) {
+        width: 1920px;
+        margin: 0 auto;
+    }
     &__bg{
         position: absolute;
         top: 0;

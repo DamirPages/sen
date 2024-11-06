@@ -2,6 +2,7 @@
     position: relative;
     height: calc(100vh - 82px);
     min-height: 800px;
+    max-height: 900px;
     z-index: 1;
     overflow: hidden;
 
@@ -11,8 +12,13 @@
     }
 
     @media only screen and (max-width: 991px) {
-        height: 700px;
+        height: 660px;
         min-height: 0px;
+    }
+
+    @media only screen and (min-width: 1921px) {
+        width: 1920px;
+        margin: 0 auto;
     }
 
     .wrapper{
