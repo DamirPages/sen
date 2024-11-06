@@ -52,6 +52,9 @@
 		</button>
 		
 	</div>
+	<div class="wrapper scroll-button active">
+		<a href="#" class="button button-banner" data-modal-open="#modal-auth">УЧАСТВОВАТЬ</a>
+	</div>
 
 	<div class="mobile-menu">
 		<a href="#" class="mobile-menu-link" data-modal-open="#modal-rules">Правила акции</a>
@@ -80,7 +83,7 @@
             <img src="./assets/img/pasta.png" alt="">
         </div>
         <div class="banner__footer">
-            <a href="#" class="button" data-modal-open="#modal-login">УЧАСТВОВАТЬ</a>
+            <a href="#" class="button" data-modal-open="#modal-auth">УЧАСТВОВАТЬ</a>
             <span>Сроки акции с 20.11.24 по 17.12.24</span>
         </div>
         <div class="banner__doctor">
@@ -424,21 +427,21 @@
             Необходимо указывать действующий E-mail к которому вы имеете доступ
         </div>
         <form class="modal__form">
-            <input type="text" class="input" placeholder="Тема сообщения">
-            <input type="text" class="input" placeholder="E-mail" required>
+            <input type="text" class="input" placeholder="Тема сообщения" name="">
+            <input type="text" class="input" placeholder="E-mail" name="" required>
             <textarea name="" class="textarea" placeholder="Текст сообщения..." id="" required></textarea>
             <a href="#" class="modal__button">
                 Отправить
             </a>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" checked>
+                <input type="checkbox" class="checkbox__input" name="" checked>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Настоящим подтверждаю, что я ознакомлен с <a href="#" data-modal-open="#modal-rules">правилами акции</a>
                 </div>
             </label>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" checked>
+                <input type="checkbox" class="checkbox__input" name="" checked>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности и согласен на обработку персональных данных

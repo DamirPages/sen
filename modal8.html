@@ -52,6 +52,9 @@
 		</button>
 		
 	</div>
+	<div class="wrapper scroll-button active">
+		<a href="#" class="button button-banner" data-modal-open="#modal-auth">УЧАСТВОВАТЬ</a>
+	</div>
 
 	<div class="mobile-menu">
 		<a href="#" class="mobile-menu-link" data-modal-open="#modal-rules">Правила акции</a>
@@ -80,7 +83,7 @@
             <img src="./assets/img/pasta.png" alt="">
         </div>
         <div class="banner__footer">
-            <a href="#" class="button" data-modal-open="#modal-login">УЧАСТВОВАТЬ</a>
+            <a href="#" class="button" data-modal-open="#modal-auth">УЧАСТВОВАТЬ</a>
             <span>Сроки акции с 20.11.24 по 17.12.24</span>
         </div>
         <div class="banner__doctor">
@@ -428,7 +431,7 @@
         <div class="modal__body">
             <div class="upload-file">
                 <!-- Тут будет итоговый файл либо с камеры или тот который прикрепили в формате строки base64 -->
-                <input type="text" id="final-result-file" class="hide">
+                <input name="" type="text" id="final-result-file" class="hide">
                 
                 <div class="upload-file__title">
                     Отсканируйте чек
@@ -460,7 +463,7 @@
                     </div>
                 </div>
                 <!-- В этом инпуте будет храниться только файл который прикрепляется -->
-                <input type="file" id="check-input" class="hide" accept="image/png, image/gif, image/jpeg">
+                <input name="" type="file" id="check-input" class="hide" accept="image/png, image/gif, image/jpeg">
                 <label for="check-input" class="file">
                     <div class="file__icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
