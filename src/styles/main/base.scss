@@ -138,3 +138,8 @@ table{
 .hide{
 	display: none;
 }
+
+.table-wrapper{
+	max-width: 100%;
+	overflow-y: auto;
+}

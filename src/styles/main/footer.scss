@@ -15,7 +15,6 @@
         &-text{
             font-size: 21px;
             line-height: 28px;
-            margin: 3px 0;
             text-align: center;
         }
         &-link{
@@ -144,4 +143,11 @@
         font-size: 13px;
         line-height: 13px;
     }
+}
+
+.modal-link-text{
+    font-size: 14px;
+    color: #00A1DC;
+    text-align: center;
+    cursor: pointer;
 }

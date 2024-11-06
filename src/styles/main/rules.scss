@@ -180,8 +180,11 @@
             .rules__steps {
                 padding-left: 60px;
 
-                @media only screen and (max-width: 991px) {
+                @media only screen and (max-width: 1200px) {
                     padding-left: 0;
+                }
+
+                @media only screen and (max-width: 991px) {
                     margin-bottom: 100px;
                 }
 
@@ -256,8 +259,11 @@
                 align-items: flex-end;
                 padding-right: 60px;
 
-                @media only screen and (max-width: 991px) {
+                @media only screen and (max-width: 1200px) {
                     padding-right: 0;
+                }
+
+                @media only screen and (max-width: 991px) {
                     margin-bottom: 0;
                 }
 
