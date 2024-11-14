@@ -1,15 +1,7 @@
 .rules {
     position: relative;
-    padding: 100px 0 100px 0;
+    padding: 50px 0;
     overflow: hidden;
-
-    @media only screen and (max-width: 1430px) {
-        padding: 70px 0 100px 0;
-    }
-
-    @media only screen and (max-width: 991px) {
-        padding: 50px 0;
-    }
 
     @media only screen and (min-width: 1921px) {
         width: 1920px;
@@ -39,7 +31,7 @@
         }
 
         @media only screen and (max-width: 991px) {
-            height: 680px;
+            height: 701px;
 
             img {
                 object-position: right top;
@@ -47,15 +39,15 @@
         }
 
         @media only screen and (max-width: 600px) {
-            height: 600px;
+            height: 613px;
         }
 
         @media only screen and (max-width: 460px) {
-            height: 625px;
+            height: 645px;
         }
 
         @media only screen and (max-width: 348px) {
-            height: 670px;
+            height: 691px;
         }
     }
 

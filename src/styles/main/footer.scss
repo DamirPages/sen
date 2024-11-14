@@ -1,5 +1,5 @@
 .footer{
-    padding: 24px 0;
+    padding: 50px 0;
     &__container{
         display: flex;
         justify-content: space-between;
@@ -43,6 +43,10 @@
         font-family: "Inter";
         transition: 0.3s;
 
+        @media screen and (max-width: 991px) {
+            margin-top: 40px;
+        }
+
         &:hover{
             background: darken($color: #1e429f, $amount: 5%);
         }
@@ -71,6 +75,10 @@
                 text-align: center;
             }
         }
+    }
+
+    &__logo{
+        max-width: 348px;
     }
 }
 @media only screen and (max-width: 1200px) {

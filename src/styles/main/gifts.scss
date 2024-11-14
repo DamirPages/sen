@@ -1,15 +1,11 @@
 .gifts{
     position: relative;
-    padding-top: 78px;
-    padding-bottom: 31px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     .wrapper{
         position: relative;
         z-index: 2;
-    }
-
-    @media only screen and (max-width: 640px) {
-        padding-top: 50px;
     }
 
     @media only screen and (min-width: 1921px) {

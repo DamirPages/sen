@@ -192,7 +192,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 18px;
+        margin-bottom: 50px;
         position: relative;
         z-index: 3;
         .button{
@@ -217,7 +217,7 @@
             }
         }
         @media only screen and (max-width: 640px) {
-            margin-bottom: 15px;
+            margin-bottom: 50px;
         }
     }
 
@@ -233,7 +233,7 @@
         }
         &-name{
             position: absolute;
-            bottom: 35px;
+            bottom: 50px;
             right: 10px;
             font-size: 11px;
             color: #223341;
@@ -241,7 +241,6 @@
             text-align: right;
             @media only screen and (max-width: 640px) {
                 right: 110px;
-                bottom: 15px;
             }
             @media only screen and (max-width: 440px) {
                 font-size: 8px;
