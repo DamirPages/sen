@@ -133,6 +133,16 @@
 }
 
 .modal-login, .modal-contact, .modal-auth{
+    .modal__close{
+        position: absolute;
+        right: 30px;
+        top: 38px;
+        cursor: pointer;
+
+        @media only screen and (max-width: 720px) {
+            top: 90px;
+        }
+    }
     @media only screen and (max-width: 720px) {
         bottom: 0;
         left: 0;
@@ -539,11 +549,13 @@
 
 .modal-politic,
 .modal-security,
-.modal-rules{
+.modal-rules,
+.modal-questions{
     .modal__container{
         width: 1000px;
         max-width: calc(100% - 40px);
-        height: calc(100% - 40px);
+        height: auto;
+        max-height: calc(100% - 40px);
         overflow-y: hidden;
         display: flex;
         flex-direction: column;

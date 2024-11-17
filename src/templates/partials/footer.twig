@@ -34,8 +34,13 @@
         </div>
         <div class="footer__copyright">
             <a href="#" data-modal-open="#modal-rules">Правила акции</a>
+            {% if isCabinet == false %}
             <a href="#quest-block">Вопросы / ответы</a>
-            <a href="#" data-modal-open="#modal-politic">Политика Конфиденциальности</a>
+            {% else %}
+            <a href="#" data-modal-open="#modal-questions">Вопросы / ответы</a>
+            {% endif %}
+            <a href="#" data-modal-open="#modal-politic">Политика Конфиденциальности 1</a>
+            <a href="#" data-modal-open="#modal-security">Политика Конфиденциальности 2</a>
         </div>
     </div>
 </footer>

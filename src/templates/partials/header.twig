@@ -10,7 +10,11 @@
 		
 		<nav class="menu">
 			<a href="#" class="menu__link" data-modal-open="#modal-rules">Правила акции</a>
+			{% if isCabinet == false %}
 			<a href="#quest-block" class="menu__link">Вопросы / ответы</a>
+			{% else %}
+			<a href="#" class="menu__link" data-modal-open="#modal-questions">Вопросы / ответы</a>
+			{% endif %}
 		</nav>
 
 		{% if isAuthorized == false %}
@@ -42,13 +46,20 @@
 		</div>
 		{% endif %}
 	</div>
+	{% if isCabinet == false %}
 	<div class="wrapper scroll-button active">
 		<a href="#" class="button button-banner" data-modal-open="#modal-auth">УЧАСТВОВАТЬ</a>
 	</div>
+	{% endif %}
 
 	<div class="mobile-menu">
 		<a href="#" class="mobile-menu-link" data-modal-open="#modal-rules">Правила акции</a>
+		{% if isCabinet == false %}
 		<a href="#quest-block" class="mobile-menu-link">Вопросы / ответы</a>
-		<div class="mobile-menu-link" data-modal-open="#modal-politic">Политика Конфиденциальности</div>
+		{% else %}
+		<a href="#" class="mobile-menu-link" data-modal-open="#modal-questions">Вопросы / ответы</a>
+		{% endif %}
+		<div class="mobile-menu-link" data-modal-open="#modal-politic">Политика Конфиденциальности 1</div>
+		<div class="mobile-menu-link" data-modal-open="#modal-security">Политика Конфиденциальности 2</div>
 	</div>
 </header>

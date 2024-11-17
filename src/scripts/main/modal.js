@@ -70,7 +70,7 @@ if (modalCookie) {
 const menuButton = document.querySelector('.menu-button');
 const mobileMenu = document.querySelector('.mobile-menu');
 
-if(menuButton && mobileMenu) {
+if (menuButton && mobileMenu) {
 	menuButton.addEventListener('click', () => {
 		mobileMenu.classList.toggle('active');
 	});
@@ -171,3 +171,19 @@ if (headerButton) {
 		}
 	});
 }
+
+const disabledCheckboxs = document.querySelectorAll('[data-disabled-button]');
+
+disabledCheckboxs.forEach((checkbox) => {
+	checkbox.addEventListener('change', () => {
+		const button = checkbox.closest('form').querySelector('[data-submit-button]');
+		const formCheckboxs = checkbox.closest('form').querySelectorAll('[data-disabled-button]');
+		const someCheckboxChecked = Array.from(formCheckboxs).every((checkbox) => checkbox.checked);
+
+		if (someCheckboxChecked) {
+			button.classList.remove('disabled');
+		} else {
+			button.classList.add('disabled');
+		}
+	});
+});
