@@ -2,6 +2,9 @@
 <html lang="ru">
 <head>
 
+
+
+
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -43,7 +46,9 @@
 		
 		<nav class="menu">
 			<a href="#" class="menu__link" data-modal-open="#modal-rules">Правила акции</a>
+			
 			<a href="#quest-block" class="menu__link">Вопросы / ответы</a>
+			
 		</nav>
 
 		
@@ -52,14 +57,19 @@
 		</button>
 		
 	</div>
+	
 	<div class="wrapper scroll-button active">
 		<a href="#" class="button button-banner" data-modal-open="#modal-auth">УЧАСТВОВАТЬ</a>
 	</div>
+	
 
 	<div class="mobile-menu">
 		<a href="#" class="mobile-menu-link" data-modal-open="#modal-rules">Правила акции</a>
+		
 		<a href="#quest-block" class="mobile-menu-link">Вопросы / ответы</a>
-		<div class="mobile-menu-link" data-modal-open="#modal-politic">Политика Конфиденциальности</div>
+		
+		<div class="mobile-menu-link" data-modal-open="#modal-politic">Политика Конфиденциальности 1</div>
+		<div class="mobile-menu-link" data-modal-open="#modal-security">Политика Конфиденциальности 2</div>
 	</div>
 </header>
 	
@@ -420,6 +430,11 @@
 </div>
 	<div class="modal modal-login active" id="modal-login">
     <div class="modal__container">
+        <div class="modal__close" data-modal-close="">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 18.5L18 6.5M6 6.5L18 18.5" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
         <div class="modal__title">
             Войти
         </div>
@@ -435,32 +450,32 @@
                 </div>
                 <input type="text" class="input" placeholder="1234" name="" required>
             </div>
-            <a href="./upload.html" class="modal__button">
+            <a href="./upload.html" class="modal__button" data-submit-button>
                 Войти
             </a>
             <div class="modal-link-text" data-change-modal="#modal-auth">
               Зарегистрироваться
             </div>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Настоящим подтверждаю, что я ознакомлен с <a href="#" data-modal-open="#modal-rules">правилами акции</a>
                 </div>
             </label>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
-                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности и согласен на обработку персональных данных
+                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности 1 и согласен на обработку персональных данных
                     в соответствии с <a href="#" data-modal-open="#modal-politic">указанным здесь текстом</a>
                 </div>
             </label>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
-                    Настоящим подтверждаю, что я ознакомлен с политикой организации обработки и обеспечения безопасности персональных данных
+                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности 2 и согласен на обработку персональных данных
                     в соответствии с <a href="#" data-modal-open="#modal-security">указанным здесь текстом</a>
                 </div>
             </label>
@@ -507,8 +522,11 @@
         </div>
         <div class="footer__copyright">
             <a href="#" data-modal-open="#modal-rules">Правила акции</a>
+            
             <a href="#quest-block">Вопросы / ответы</a>
-            <a href="#" data-modal-open="#modal-politic">Политика Конфиденциальности</a>
+            
+            <a href="#" data-modal-open="#modal-politic">Политика Конфиденциальности 1</a>
+            <a href="#" data-modal-open="#modal-security">Политика Конфиденциальности 2</a>
         </div>
     </div>
 </footer>
