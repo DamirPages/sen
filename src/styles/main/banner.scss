@@ -52,6 +52,13 @@
         position: relative;
         margin-bottom: 15px;
 
+        img{
+            display: block;
+            @media screen and (max-width: 1200px) {
+                margin-bottom: -2px;
+            }
+        }
+
         @media only screen and (max-width: 1200px) {
             font-size: 27px;
         }

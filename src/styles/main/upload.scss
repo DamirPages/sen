@@ -2,6 +2,15 @@
     background: #ebebeb;
     padding: 18px 0 35px 0;
     flex-grow: 1;
+    min-height: calc(100vh - 82px);
+
+    @media only screen and (max-width: 1200px) {
+        min-height: calc(100vh - 68px);
+    }
+
+    @media only screen and (max-width: 991px) {
+        min-height: calc(100vh - 62px);
+    }
 
     .wrapper{
         display: flex;

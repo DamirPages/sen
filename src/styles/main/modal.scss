@@ -182,6 +182,7 @@
     outline: none;
     transition: 0.3s;
     font-family: "Montserrat", sans-serif;
+    font-size: 16px;
 
     &:focus{
         border-color: #00A1DC;
@@ -260,6 +261,7 @@
 .modal-check-send,
 .modal-start-test,
 .modal-cong,
+.modal-logout,
 .modal-lose{
     padding: 20px;
     .modal__container{

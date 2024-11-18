@@ -8,13 +8,16 @@ body {
 html {
 	height: 100%;
     scroll-behavior: smooth;
-	scroll-padding-top: 82px;
+	scroll-padding-top: 159px;
 
 	@media only screen and (max-width: 1200px) {
-		scroll-padding-top: 68px;
+		scroll-padding-top: 136px;
 	}
 	@media only screen and (max-width: 991px) {
-		scroll-padding-top: 58px;
+		scroll-padding-top: 126px;
+	}
+	@media only screen and (max-width: 640px) {
+		scroll-padding-top: 114px;
 	}
 }
 
@@ -143,3 +146,31 @@ table{
 	max-width: 100%;
 	overflow-y: auto;
 }
+
+.loading{
+	position: relative;
+	color: transparent !important;
+	pointer-events: none !important;
+	&:after{
+		content: '';
+		position: absolute;
+		box-sizing: border-box;
+		left: calc(50% - 13px);
+		top: calc(50% - 13px);
+		width: 26px;
+		padding: 4px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background: #fff;
+		--_m: 
+		conic-gradient(#0000 10%,#000),
+		linear-gradient(#000 0 0) content-box;
+		-webkit-mask: var(--_m);
+				mask: var(--_m);
+		-webkit-mask-composite: source-out;
+				mask-composite: subtract;
+		animation: l3 1s infinite linear;
+	}
+}
+
+@keyframes l3 {to{transform: rotate(1turn)}}

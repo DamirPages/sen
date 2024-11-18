@@ -100,7 +100,7 @@
 @media only screen and (max-width: 991px) {
     .footer .wrapper{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .footer__copyright{
         display: flex;
@@ -108,7 +108,7 @@
         align-items: center;
         margin-top: 0;
         gap: 10px;
-        margin-bottom: 40px;
+        margin-top: 40px;
     }
     .footer{
         padding: 50px 0;
