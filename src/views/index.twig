@@ -1,20 +1,22 @@
 {% extends "templates/layouts/base.twig" %}
 
-{% set title = "SENSODYNE" %}
+{% set title = "КВК групп" %}
 {% set isAuthorized = false %}
 {% set allModalView = false %}
+{% set landing = true %}
 
 {% block content %}
 	{% include './templates/partials/banner.twig' %}
-	{% include './templates/partials/rules.twig' %}
+	{% include './templates/partials/how.twig' %}
 	{% include './templates/partials/gifts.twig' %}
-	{% include './templates/partials/modal-cookie.twig' %}
+	{% include './templates/partials/products.twig' %}
 	{% include './templates/partials/questions.twig' %}
+	{% include './templates/partials/modal-cookie.twig' %}
 	{% include './templates/partials/modal-auth.twig' %}
 	{% include './templates/partials/modal-login.twig' %}
 	{% include './templates/partials/modal-contact.twig' %}
 	{% include './templates/partials/modal-code.twig' %}
 	{% include './templates/partials/modal-politic.twig' %}
-	{% include './templates/partials/modal-security.twig' %}
 	{% include './templates/partials/modal-rules.twig' %}
+	{% include './templates/partials/modal-18.twig' %}
 {% endblock %}

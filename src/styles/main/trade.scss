@@ -1,0 +1,32 @@
+.trade-page__text{
+    color: #223341;
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.trade-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+    column-gap: 18px;
+    max-width: 500px;
+}
+
+.trade-card__img{
+    svg, img{
+        width: 100%;
+    }
+}
+
+.trade-card{
+    position: relative;
+}
+
+.trade-card__price{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}

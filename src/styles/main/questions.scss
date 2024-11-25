@@ -1,63 +1,89 @@
 .questions{
-    padding: 50px 0 10px 0;
-    position: relative;
-    color: #fff;
+    padding: 50px 0;
 
-    @media only screen and (min-width: 1921px) {
-        width: 1920px;
-        margin: 0 auto;
-    }
-
-    .wrapper{
-        position: relative;
-        z-index: 2;
-    }
-    &__title{
-        font-size: 36px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        @media only screen and (max-width: 640px) {
-            font-size: 26px;
+    .questions__more{
+        &-hide{
+            display: none;
+        }
+        &-show{
+            display: block;
         }
     }
+
+    &.opened{
+        .questions__item{
+            display: block;
+        }
+        .questions__more{
+            &-hide{
+                display: block;
+            }
+            &-show{
+                display: none;
+            }
+        }
+    }
+
     &__container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
 
-        @media only screen and (max-width: 991px) {
-            flex-direction: column;
+        @media screen and (max-width: 640px) {
+            grid-template-columns: 1fr;
         }
     }
-    &__quest{
+
+    &__title{
         font-size: 20px;
-        margin-bottom: 12px;
         font-weight: bold;
+        margin-bottom: 12px;
+        color: #EE8966;
     }
-    &__answ{
+
+    &__text{
         font-size: 16px;
-        line-height: 120%;
+        color: #fff;
     }
+
     &__item{
-        width: calc(50% - 15px);
-        margin-bottom: 40px;
-        @media only screen and (max-width: 991px) {
-            width: 100%;
+        @media screen and (max-width: 640px) {
+            &:nth-child(n + 4){
+                display: none;
+            }
         }
     }
-    &__bg{
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+    &__more{
+        display: none;
+        justify-content: center;
+        margin-top: 50px;
+        @media screen and (max-width: 640px) {
+            display: flex;
+        }
+
+        span{
+            color: #fff;
+            font-size: 14px;
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                left: calc(100% + 15px);
+                top: calc(50% - 10px);
+                width: 11px;
+                height: 11px;
+                transform: rotate(45deg);
+                border-bottom: 2px solid #fff;
+                border-right: 2px solid #fff;
+                border-radius: 2px;
+            }
+
+            &:last-child::before{
+                transform: rotate(-135deg);
+                top: calc(50% - 2px);
+            }
         }
     }
 }

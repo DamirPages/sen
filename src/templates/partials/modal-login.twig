@@ -11,42 +11,34 @@
         <div class="modal__text">
             Необходимо указывать действующий E-mail к которому вы имеете доступ
         </div>
-        <form class="modal__form">
-            <input type="text" class="input" placeholder="Имя" name="" required>
-            <input type="text" class="input" placeholder="E-mail" name="" required>
+        <form class="modal__form" data-disabled-button-form>
+            <input type="text" class="input" placeholder="Имя" name="" required data-disabled-button-input>
+            <input type="text" class="input" placeholder="E-mail" name="" required data-disabled-button-input>
             <div class="modal__form-group">
                 <div class="modal__button modal__button-second" data-modal-open="#modal-code">
                     Отправить код
                 </div>
-                <input type="text" class="input" placeholder="1234" name="" required>
+                <input type="text" class="input" placeholder="1234" inputmode="numeric" name="" required data-disabled-button-input>
             </div>
-            <a href="./upload.html" class="modal__button" data-submit-button>
+            <a href="./upload.html" class="modal__button disabled" data-submit-button>
                 Войти
             </a>
             <div class="modal-link-text" data-change-modal="#modal-auth">
               Зарегистрироваться
             </div>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button-checkbox>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Настоящим подтверждаю, что я ознакомлен с <a href="#" data-modal-open="#modal-rules">правилами акции</a>
                 </div>
             </label>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button-checkbox>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
-                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности 1 и согласен на обработку персональных данных
+                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности и согласен на обработку персональных данных
                     в соответствии с <a href="#" data-modal-open="#modal-politic">указанным здесь текстом</a>
-                </div>
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
-                <span class="checkbox__icon"></span>
-                <div class="checkbox__text">
-                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности 2 и согласен на обработку персональных данных
-                    в соответствии с <a href="#" data-modal-open="#modal-security">указанным здесь текстом</a>
                 </div>
             </label>
         </form>

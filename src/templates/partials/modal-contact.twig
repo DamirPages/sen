@@ -11,34 +11,26 @@
         <div class="modal__text">
             Необходимо указывать действующий E-mail к которому вы имеете доступ
         </div>
-        <form class="modal__form">
+        <form class="modal__form" data-disabled-button-form>
             <input type="text" class="input" placeholder="Тема сообщения" name="">
-            <input type="text" class="input" placeholder="E-mail" name="" required>
-            <textarea name="" class="textarea" placeholder="Текст сообщения..." id="" required></textarea>
-            <a href="#" class="modal__button" data-submit-button>
+            <input type="text" class="input" placeholder="E-mail" name="" required data-disabled-button-input>
+            <textarea name="" class="textarea" placeholder="Текст сообщения..." id="" required data-disabled-button-input></textarea>
+            <a href="#" class="modal__button disabled" data-submit-button>
                 Отправить
             </a>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button-checkbox>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
                     Настоящим подтверждаю, что я ознакомлен с <a href="#" data-modal-open="#modal-rules">правилами акции</a>
                 </div>
             </label>
             <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
+                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button-checkbox>
                 <span class="checkbox__icon"></span>
                 <div class="checkbox__text">
-                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности 1 и согласен на обработку персональных данных
+                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности и согласен на обработку персональных данных
                     в соответствии с <a href="#" data-modal-open="#modal-politic">указанным здесь текстом</a>
-                </div>
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" name="" checked data-disabled-button>
-                <span class="checkbox__icon"></span>
-                <div class="checkbox__text">
-                    Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности 2 и согласен на обработку персональных данных
-                    в соответствии с <a href="#" data-modal-open="#modal-security">указанным здесь текстом</a>
                 </div>
             </label>
         </form>

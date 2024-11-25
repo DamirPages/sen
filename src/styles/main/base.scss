@@ -174,3 +174,55 @@ table{
 }
 
 @keyframes l3 {to{transform: rotate(1turn)}}
+
+
+body{
+	padding-top: 82px;
+	opacity: 0;
+}
+body.load{
+	opacity: 1;
+}
+
+header.header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 82px;
+}
+
+.bg-blue{
+	background: #0055B8;
+}
+
+@media only screen and (max-width: 1200px) {
+	header.header{
+		min-height: 68px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	body{
+		padding-top: 65px;
+	}
+	header.header{
+		min-height: 65px;
+	}
+	header.header .wrapper:not(.scroll-button){
+		min-height: 35px;
+	}
+}
+
+.title{
+	font-size: 38px;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 50px;
+
+	@media screen and (max-width: 640px) {
+		font-size: 20px;
+	}
+}

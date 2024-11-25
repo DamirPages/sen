@@ -1,0 +1,14 @@
+{% extends "templates/layouts/short.twig" %}
+
+{% set title = "КВК групп" %}
+{% set isAuthorized = true %}
+{% set allModalView = false %}
+
+{% block content %}
+    {% include './templates/partials/trade.twig' %}
+    
+	{% include './templates/partials/modal-logout.twig' %}
+	{% include './templates/partials/modal-contact.twig' %}
+	{% include './templates/partials/modal-politic.twig' %}
+	{% include './templates/partials/modal-rules.twig' %}
+{% endblock %}

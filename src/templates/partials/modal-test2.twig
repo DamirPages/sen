@@ -1,0 +1,293 @@
+<div class="modal modal-test {% if allModalView == true %}active{% endif %}" id="modal-test2">
+    <div class="modal__container">
+        <div class="modal__header">
+            Тест по бренду Medoff
+            <div class="modal__close" data-modal-close>
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18.5L18 6.5M6 6.5L18 18.5" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="modal__body">
+            <div class="test">
+                <div class="test__stat">
+                    <div class="test__pass">
+                        <span id="progress">0%</span>
+                        Пройдено
+                    </div>
+                    <div class="test__quests">
+                        <span id="current-question">*</span>
+                        из 
+                        <span id="total-questions">*</span>
+                        вопросов
+                    </div>
+                </div>
+                <div class="test__bar">
+                    <span style="width: 0%" id="progress-bar"></span>
+                </div>
+                <form class="test__container">
+                    <div class="test__item active">
+                        <div class="test__num">
+                            Вопрос 1
+                        </div>
+                        <div class="test__quest">
+                            Перечислите, все продукты, которые входят в коллекцию Medoff
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Medoff Classic, Medoff Original, Medoff, Medoff Silk, Medoff Berries, Medoff Cayenne
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Medoff Classic, Medoff Luxe, Medoff Original, Medoff Black, Medoff Gold
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Medoff Classic, Medoff Original, Medoff, Medoff Luxe, Medoff Cayenne
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" data-next-question disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 2
+                        </div>
+                        <div class="test__quest">
+                            Где производится водка Medoff?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Производится на собственном заводе компании КВК групп в Севастополе
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Производится на двух собственных заводах компании КВК групп - в Симферополе и в Рузе
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Производится на единственном, собственном заводе компании КВК групп в Симферополе 
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" data-next-question disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 3
+                        </div>
+                        <div class="test__quest">
+                            Благодаря какой технологии водка Medoff приобретает необыкновенно мягкий вкус?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Технология добавления мёда, которую изобрели технологи завода компании КВК групп в 2003 году
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Технология очистки мёдом, которую изобрели технологи завода компании КВК групп в 2003 году
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Технология очистки активированным углём, которую изобрели технологи завода компании КВК групп в 2003 году
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 4
+                        </div>
+                        <div class="test__quest">
+                            Какой спирт составляет основу водки Medoff?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Спирты «Альфа» и «Люкс»
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Спирт «Люкс»
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Спирт «Альфа» 
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 5
+                        </div>
+                        <div class="test__quest">
+                            Сколько градусов в сладкой настойке Medoff Berries?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    20% 
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    25%
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    27%
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 6
+                        </div>
+                        <div class="test__quest">
+                            Сколько градусов в горькой настойке Medoff Cayenne?
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    40%
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    45%
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    43%
+                                </div>
+                            </label>
+                        </div>
+                        <button type="button" class="modal__button" disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                    <div class="test__item">
+                        <div class="test__num">
+                            Вопрос 7
+                        </div>
+                        <div class="test__quest">
+                            Какие отличительные черты у бутылки водки Medoff? (выберите все подходящие ответы)
+                        </div>
+                        <div class="test__answers">
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Эмбоссинг (объёмный рисунок)
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Колпак, оснащённый контролем налива напитка
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Колпак, оснащенный контролем вскрытия  
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Этикетка в стиле палехской росписи 
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Голограмма 
+                                </div>
+                            </label>
+                            <label class="test__answer">
+                                <input type="checkbox" name="">
+                                <div class="test__icon"></div>
+                                <div class="test__text">
+                                    Этикетка в стиле хохломской росписи 
+                                </div>
+                            </label>
+                        </div>
+                        <button type="submit" class="modal__button" disabled>
+                            Подтвердить ответ
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal__overlay"></div>
+</div>

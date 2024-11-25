@@ -1,0 +1,10 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "КВК групп" %}
+{% set isAuthorized = false %}
+{% set allModalView = true %}
+
+{% block content %}
+	{% include './templates/partials/banner.twig' %}
+	{% include './templates/partials/modal-trade3.twig' %}
+{% endblock %}

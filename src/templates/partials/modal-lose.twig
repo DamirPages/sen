@@ -1,16 +1,14 @@
-<div class="modal modal-lose {% if allModalView == true %}active{% endif %}" id="modal-lose">
+<div class="modal modal-cong {% if allModalView == true %}active{% endif %}" id="modal-lose">
     <div class="modal__container">
         <div class="modal__title">
-            К сожалению, Вы ответили неправильно на некоторые вопросы!
+            К сожалению, Вы не ответили верно на все вопросы.
         </div>
-        <div class="modal__buttons">
-            <div class="modal__button modal__button-border">
-                Еще раз
-            </div>
-            <div class="modal__button">
-                Нет
-            </div>
+        <div class="modal__text">
+            Предлагаем ещё раз ознакомиться с данным модулем
         </div>
+        <button class="modal__button">
+            К обучению
+        </button>
     </div>
     <div class="modal__overlay"></div>
 </div>

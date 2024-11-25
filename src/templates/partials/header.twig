@@ -4,17 +4,17 @@
 			<img src="./src/assets/img/menu.svg" alt="">
 		</div>
 
-		<a href="/" class="logo">
-			<img src="./src/assets/img/logo.png" alt="">
-		</a>
+		<div class="logo">
+			<img src="./src/assets/img/logo.svg" alt="">
+		</div>
 		
 		<nav class="menu">
 			<a href="#" class="menu__link" data-modal-open="#modal-rules">Правила акции</a>
-			{% if isCabinet == false %}
-			<a href="#quest-block" class="menu__link">Вопросы / ответы</a>
-			{% else %}
-			<a href="#" class="menu__link" data-modal-open="#modal-questions">Вопросы / ответы</a>
+			{% if isEducation != true %}
+				<a href="./#products" class="menu__link">Продукция</a>
+				<a href="./#gifts" class="menu__link">Подарки</a>
 			{% endif %}
+			<a href="#" class="menu__link" data-modal-open="#modal-contact">Связаться с нами</a>
 		</nav>
 
 		{% if isAuthorized == false %}
@@ -29,15 +29,7 @@
 				</div>
 				<div class="prize__count">3</div>
 				<div class="prize__text">
-					шанса
-				</div>
-			</div>
-			<div class="profile">
-				<div class="profile__img">
-					<img src="./src/assets/img/avatar.png" alt="">
-				</div>
-				<div class="profile__name">
-					Александр
+					баллов
 				</div>
 			</div>
 			<div class="logout" data-modal-open="#modal-logout">
@@ -47,19 +39,25 @@
 		{% endif %}
 	</div>
 	{% if isCabinet == false %}
-	<div class="wrapper scroll-button active">
+	<div class="wrapper scroll-button">
 		<a href="#" class="button button-banner" data-modal-open="#modal-auth">УЧАСТВОВАТЬ</a>
 	</div>
 	{% endif %}
 
 	<div class="mobile-menu">
-		<a href="#" class="mobile-menu-link" data-modal-open="#modal-rules">Правила акции</a>
-		{% if isCabinet == false %}
-		<a href="#quest-block" class="mobile-menu-link">Вопросы / ответы</a>
+		{% if landing == true %}
+			<div class="mobile-menu-link" data-modal-open="#modal-rules">Правила акции</div>
+			<a href="#products" class="mobile-menu-link" >Продукция</a>
+			<a href="#gifts" class="mobile-menu-link" >Подарки</a>
+			<div class="mobile-menu-link" data-modal-open="#modal-contact">Политика конфиденциальности</div>
 		{% else %}
-		<a href="#" class="mobile-menu-link" data-modal-open="#modal-questions">Вопросы / ответы</a>
+			<a href="./menu" class="mobile-menu-link">Пройти обучение</a>
+			<a href="./upload" class="mobile-menu-link">Загрузить чеки</a>
+			<a href="./trade" class="mobile-menu-link">Обменять баллы</a>
+			<div class="mobile-menu-link" data-modal-open="#modal-contact">Связаться с нами</div>
+			<div class="mobile-menu-link" data-modal-open="#modal-rules">Правила акции</div>
+			<div class="mobile-menu-link" data-modal-open="#modal-politic">Политика конфиденциальности</div>
 		{% endif %}
-		<div class="mobile-menu-link" data-modal-open="#modal-politic">Политика Конфиденциальности 1</div>
-		<div class="mobile-menu-link" data-modal-open="#modal-security">Политика Конфиденциальности 2</div>
+		
 	</div>
 </header>
